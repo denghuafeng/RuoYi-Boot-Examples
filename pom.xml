@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.dromara.boot</groupId>
+    <artifactId>ruoyi-boot-starter-parent</artifactId>
+    <version>5.2.1</version>
+  </parent>
+  <groupId>cc.dhf</groupId>
+  <artifactId>ruoyi-boot-examples</artifactId>
+  <version>${revision}</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>ruoyi-example-services</module>
+    <module>ruoyi-example-dependencies</module>
+    <module>ruoyi-example-apps</module>
+  </modules>
+  <properties>
+    <revision>1.0.0</revision>
+  </properties>
+  <!-- 依赖声明 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>ruoyi-example-dependencies</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

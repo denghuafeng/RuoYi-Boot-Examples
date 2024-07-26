@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cc.dhf</groupId>
+        <artifactId>ruoyi-example-services</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>ruoyi-blog</artifactId>
+    <packaging>jar</packaging>
+
+    <name>ruoyi-blog</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.dromara.boot</groupId>
+            <artifactId>ruoyi-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+</project>
