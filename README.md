@@ -15,9 +15,25 @@ maven clean install
     <version>5.2.1</version>
 </parent>
 ```
-支持扫描不同包，即自己公司或域名的包命名，使用方式如下：
 
-1.需要配置MyBatisPlus mapper domain多包扫描。
+基础依赖依赖声明
+```XML
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>ruoyi-example-dependencies</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+```
+
+支持扫描不同包，即公司或自己域名的包命名，使用方式如下：
+
+1.需要配置MyBatisPlus的mapper和domain多包扫描。
 ```yml
 mybatis-plus:
   # 多包名使用 例如 org.dromara.**.mapper,org.xxx.**.mapper
@@ -43,4 +59,16 @@ mybatis-plus:
   }
 
 }
+```
+
+## 🖥源码结构
+
+```
+ruoyi-boot-examples -- 继承ruoyi-boot-starter-parent
+├─ruoyi-example-apps -- 应用模块
+│  ├─ruoyi-example-app-admin  -- 后台管理应用启动
+│  └─ruoyi-example-app-front  -- 前台应用启动
+├─ruoyi-example-dependencies -- 基础包依赖，service模块依赖都可以在此申明
+└─ruoyi-example-services -- 服务模块,业务模块
+   └─ruoyi-blog  -- 博客模块
 ```
